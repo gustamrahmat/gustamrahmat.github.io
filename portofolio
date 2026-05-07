@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Gustam Rahmat Kristyanto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        cyber: {
+                            bg: '#0B1120',
+                            card: '#1E293B',
+                            accent: '#10B981', // Emerald green
+                            text: '#F8FAFC',
+                            muted: '#94A3B8'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0B1120; color: #F8FAFC; }
+        .glass-card { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .tech-pattern { background-image: radial-gradient(#334155 1px, transparent 1px); background-size: 24px 24px; }
+        
+        /* Animations */
+        .fade-in { animation: fadeIn 1s ease-out forwards; opacity: 0; transform: translateY(20px); }
+        @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+    </style>
+</head>
+<body class="font-sans antialiased tech-pattern selection:bg-cyber-accent selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-card border-b border-gray-800 transition-all duration-300">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0 font-mono font-bold text-xl text-cyber-accent">
+                    <i class="fa-solid fa-terminal mr-2"></i>Gustam.
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-6 text-sm font-medium">
+                        <a href="#profil" class="hover:text-cyber-accent transition-colors">Profil</a>
+                        <a href="#edukasi" class="hover:text-cyber-accent transition-colors">Edukasi</a>
+                        <a href="#skills" class="hover:text-cyber-accent transition-colors">Skills</a>
+                        <a href="#proyek" class="hover:text-cyber-accent transition-colors">Proyek</a>
+                        <a href="#kontak" class="bg-cyber-accent text-cyber-bg px-4 py-2 rounded-md hover:bg-emerald-400 transition-colors">Kontak</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Halaman 1: Introduction / Profil -->
+    <section id="profil" class="min-h-screen flex items-center justify-center pt-20 pb-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1 fade-in">
+                <p class="text-cyber-accent font-mono mb-2">Hello, World! Saya</p>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4">
+                    Gustam Rahmat <br/><span class="text-gray-400">Kristyanto</span>
+                </h1>
+                <h2 class="text-xl sm:text-2xl text-cyber-muted font-medium mb-6">Cybersecurity Enthusiast & Web Developer</h2>
+                <p class="text-gray-300 leading-relaxed mb-8 text-lg">
+                    Mahasiswa D4 Rekayasa Keamanan Siber di Politeknik Bhakti Semesta. Memiliki minat mendalam pada 
+                    <span class="text-cyber-accent font-medium">pengembangan web</span> dan 
+                    <span class="text-cyber-accent font-medium">mobile penetration testing</span>. 
+                    Terbiasa menggunakan pendekatan analitis untuk memecahkan masalah keamanan digital dan siap berkontribusi secara nyata dalam lingkungan profesional.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#proyek" class="bg-cyber-accent text-cyber-bg font-semibold px-6 py-3 rounded-lg hover:bg-emerald-400 transition-all shadow-[0_0_15px_rgba(16,185,129,0.4)]">
+                        Lihat Proyek Saya
+                    </a>
+                    <a href="#kontak" class="border border-cyber-accent text-cyber-accent font-semibold px-6 py-3 rounded-lg hover:bg-cyber-accent hover:text-cyber-bg transition-all">
+                        Hubungi Saya
+                    </a>
+                </div>
+            </div>
+            <div class="order-1 md:order-2 flex justify-center fade-in delay-200">
+                <div class="relative w-64 h-64 sm:w-80 sm:h-80">
+                    <div class="absolute inset-0 rounded-full border-4 border-cyber-accent border-dashed animate-[spin_10s_linear_infinite] opacity-50"></div>
+                    <div class="absolute inset-2 rounded-full overflow-hidden border-4 border-gray-800 bg-gray-900 flex items-center justify-center">
+                        <!-- Placeholder Foto: Ganti src dengan URL foto profesionalmu -->
+                        <img src="https://ui-avatars.com/api/?name=Gustam+Rahmat&background=10B981&color=fff&size=512" alt="Foto Profil Gustam" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Halaman 2: Education / Edukasi -->
+    <section id="edukasi" class="py-20 bg-cyber-bg/50 px-4 sm:px-6 lg:px-8 border-y border-gray-800">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold mb-2 flex items-center gap-3 fade-in">
+                <i class="fa-solid fa-graduation-cap text-cyber-accent"></i> Latar Belakang Edukasi
+            </h2>
+            <div class="w-20 h-1 bg-cyber-accent mb-12 rounded-full fade-in"></div>
+
+            <div class="space-y-8">
+                <!-- Edukasi 1 -->
+                <div class="glass-card p-6 rounded-xl relative overflow-hidden group hover:border-cyber-accent transition-colors fade-in delay-100">
+                    <div class="absolute top-0 right-0 bg-cyber-accent text-cyber-bg font-mono text-xs font-bold px-3 py-1 rounded-bl-lg">
+                        2023 - Sekarang
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-1">Politeknik Bhakti Semesta</h3>
+                    <p class="text-cyber-accent font-medium mb-3">D4 - Rekayasa Keamanan Siber</p>
+                    <p class="text-gray-400 text-sm">Fokus pembelajaran pada keamanan jaringan, penetration testing, kriptografi, dan pengembangan sistem yang aman (Secure Software Engineering).</p>
+                </div>
+
+                <!-- Edukasi 2 -->
+                <div class="glass-card p-6 rounded-xl relative overflow-hidden group hover:border-gray-500 transition-colors fade-in delay-200">
+                    <div class="absolute top-0 right-0 bg-gray-700 text-white font-mono text-xs font-bold px-3 py-1 rounded-bl-lg">
+                        2020 - 2023
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-1">SMA Negeri 02 Salatiga</h3>
+                    <p class="text-gray-400 font-medium mb-3">Jurusan: Ilmu Pengetahuan Sosial</p>
+                    <p class="text-gray-400 text-sm">Membangun dasar kemampuan analitis, komunikasi, dan penulisan akademis yang kuat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Halaman 3: Skills & Certifications -->
+    <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-2 flex items-center gap-3 fade-in">
+                <i class="fa-solid fa-code text-cyber-accent"></i> Keterampilan & Sertifikasi
+            </h2>
+            <div class="w-20 h-1 bg-cyber-accent mb-12 rounded-full fade-in"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Hard & Soft Skills -->
+                <div class="space-y-8 fade-in delay-100">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-white flex items-center gap-2">
+                            <i class="fa-solid fa-shield-halved text-cyber-muted"></i> Hard Skills
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-800 border border-gray-700 text-cyber-accent px-4 py-2 rounded-full text-sm font-mono hover:border-cyber-accent transition-colors">Cybersecurity</span>
+                            <span class="bg-gray-800 border border-gray-700 text-cyber-accent px-4 py-2 rounded-full text-sm font-mono hover:border-cyber-accent transition-colors">Penetration Testing (OWASP)</span>
+                            <span class="bg-gray-800 border border-gray-700 text-cyber-accent px-4 py-2 rounded-full text-sm font-mono hover:border-cyber-accent transition-colors">Web Development</span>
+                            <span class="bg-gray-800 border border-gray-700 text-cyber-accent px-4 py-2 rounded-full text-sm font-mono hover:border-cyber-accent transition-colors">Software Engineering</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-4 text-white flex items-center gap-2">
+                            <i class="fa-solid fa-users text-cyber-muted"></i> Soft Skills
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-800 border border-gray-700 text-white px-4 py-2 rounded-full text-sm hover:bg-gray-700 transition-colors">Analytical Research</span>
+                            <span class="bg-gray-800 border border-gray-700 text-white px-4 py-2 rounded-full text-sm hover:bg-gray-700 transition-colors">Problem Solving</span>
+                            <span class="bg-gray-800 border border-gray-700 text-white px-4 py-2 rounded-full text-sm hover:bg-gray-700 transition-colors">Technical & Academic Writing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications -->
+                <div class="fade-in delay-200">
+                    <h3 class="text-xl font-semibold mb-4 text-white flex items-center gap-2">
+                        <i class="fa-solid fa-certificate text-cyber-muted"></i> Sertifikasi Profesional
+                    </h3>
+                    <div class="glass-card p-6 rounded-xl border border-cyber-accent/30 flex items-start gap-4 hover:shadow-[0_0_20px_rgba(16,185,129,0.15)] transition-all">
+                        <div class="bg-cyber-bg p-4 rounded-lg border border-gray-700 shrink-0">
+                            <i class="fa-solid fa-network-wired text-3xl text-cyber-accent"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-white">MTCNA</h4>
+                            <p class="text-cyber-accent text-sm mb-2">MikroTik Certified Network Associate</p>
+                            <p class="text-gray-400 text-sm mb-3">Diperoleh: September 2024</p>
+                            <div class="w-full bg-gray-800 h-24 rounded-lg flex items-center justify-center border border-dashed border-gray-600">
+                                <span class="text-xs text-gray-500">[ Tempat Visual Sertifikat ]</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Halaman 4 & 5: Projects -->
+    <section id="proyek" class="py-20 bg-cyber-bg/50 px-4 sm:px-6 lg:px-8 border-y border-gray-800">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold mb-2 flex items-center gap-3 fade-in">
+                <i class="fa-solid fa-folder-open text-cyber-accent"></i> Pengalaman Proyek
+            </h2>
+            <div class="w-20 h-1 bg-cyber-accent mb-12 rounded-full fade-in"></div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <!-- Project 1 -->
+                <div class="glass-card rounded-xl overflow-hidden flex flex-col h-full hover:-translate-y-2 transition-transform duration-300 fade-in delay-100">
+                    <div class="bg-gray-800 h-48 relative border-b border-gray-700 flex items-center justify-center overflow-hidden">
+                        <i class="fa-brands fa-android text-6xl text-cyber-muted opacity-20 absolute"></i>
+                        <div class="z-10 text-center">
+                            <i class="fa-solid fa-bug text-3xl text-cyber-accent mb-2"></i>
+                            <h3 class="font-mono text-lg text-white font-bold tracking-wide">MOBILE PEN TESTER</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-white">Pengujian Keamanan Aplikasi</h3>
+                            <span class="text-xs font-mono bg-cyber-accent/20 text-cyber-accent px-2 py-1 rounded">Akhir 2026</span>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-4 border-b border-gray-700 pb-4">
+                            <strong>Objektif:</strong> Melakukan pengujian keamanan komprehensif pada aplikasi Android mengacu pada standar OWASP 2024 untuk meningkatkan postur perlindungan data.
+                        </p>
+                        <div class="flex-grow">
+                            <h4 class="text-sm font-semibold text-white mb-2">Proses Penyelesaian:</h4>
+                            <ul class="text-sm text-gray-300 space-y-2">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-cyber-accent mt-1 text-xs"></i>
+                                    <span>Mengeksekusi penetration testing secara mendalam, termasuk melakukan bypass pada perlindungan SSL pinning dan menemukan celah insecure data storage.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-cyber-accent mt-1 text-xs"></i>
+                                    <span>Menyusun laporan teknis terkait temuan kerentanan, lengkap dengan rekomendasi mitigasi untuk pihak developer.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="glass-card rounded-xl overflow-hidden flex flex-col h-full hover:-translate-y-2 transition-transform duration-300 fade-in delay-200">
+                    <div class="bg-gray-800 h-48 relative border-b border-gray-700 flex items-center justify-center overflow-hidden">
+                        <i class="fa-solid fa-code text-6xl text-cyber-muted opacity-20 absolute"></i>
+                        <div class="z-10 text-center">
+                            <i class="fa-solid fa-cart-shopping text-3xl text-cyber-accent mb-2"></i>
+                            <h3 class="font-mono text-lg text-white font-bold tracking-wide">E-COMMERCE WEB DEV</h3>
+                        </div>
+                    </div>
+                    <div class="p-6 flex-grow flex flex-col">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-white">Pengembangan Website Katering</h3>
+                            <span class="text-xs font-mono bg-cyber-accent/20 text-cyber-accent px-2 py-1 rounded">Akademik 2024</span>
+                        </div>
+                        <p class="text-sm text-gray-400 mb-4 border-b border-gray-700 pb-4">
+                            <strong>Objektif:</strong> Merancang platform e-commerce fungsional untuk mendukung digitalisasi UMKM katering lokal.
+                        </p>
+                        <div class="flex-grow">
+                            <h4 class="text-sm font-semibold text-white mb-2">Proses Penyelesaian:</h4>
+                            <ul class="text-sm text-gray-300 space-y-2">
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-cyber-accent mt-1 text-xs"></i>
+                                    <span>Membangun arsitektur dari awal dengan mengimplementasikan fitur katalog produk, keranjang belanja, serta formulir pemesanan.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fa-solid fa-check text-cyber-accent mt-1 text-xs"></i>
+                                    <span>Mengintegrasikan sistem checkout langsung ke WhatsApp API untuk mengotomatisasi pengiriman data pesanan dan mempermudah komunikasi pelanggan.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Halaman 6: Contact Me -->
+    <section id="kontak" class="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <!-- Glow effect background -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyber-accent/20 rounded-full blur-[100px] pointer-events-none"></div>
+        
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h2 class="text-4xl font-bold mb-4 text-white fade-in">Mari Terhubung!</h2>
+            <p class="text-gray-400 mb-12 fade-in delay-100">Tertarik untuk berkolaborasi atau mendiskusikan peluang karir di bidang keamanan siber dan pengembangan web? Jangan ragu untuk menghubungi saya.</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 fade-in delay-200">
+                <!-- WA -->
+                <a href="https://wa.me/6285848267416" target="_blank" class="glass-card p-6 rounded-xl flex flex-col items-center justify-center hover:bg-gray-800 transition-colors group">
+                    <i class="fa-brands fa-whatsapp text-3xl text-gray-400 group-hover:text-emerald-400 mb-3 transition-colors"></i>
+                    <span class="text-sm font-medium text-white">WhatsApp</span>
+                    <span class="text-xs text-gray-500 mt-1">+62 858-4826-7416</span>
+                </a>
+                
+                <!-- Email -->
+                <a href="mailto:gustamrahmat0713@gmail.com" class="glass-card p-6 rounded-xl flex flex-col items-center justify-center hover:bg-gray-800 transition-colors group">
+                    <i class="fa-regular fa-envelope text-3xl text-gray-400 group-hover:text-red-400 mb-3 transition-colors"></i>
+                    <span class="text-sm font-medium text-white">Email</span>
+                    <span class="text-xs text-gray-500 mt-1">gustamrahmat0713</span>
+                </a>
+
+                <!-- Location -->
+                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center">
+                    <i class="fa-solid fa-location-dot text-3xl text-cyber-accent mb-3"></i>
+                    <span class="text-sm font-medium text-white">Lokasi</span>
+                    <span class="text-xs text-gray-500 mt-1">Salatiga, Jawa Tengah</span>
+                </div>
+
+                <!-- Medium -->
+                <a href="https://medium.com/@gussstaaammm" target="_blank" class="glass-card p-6 rounded-xl flex flex-col items-center justify-center hover:bg-gray-800 transition-colors group">
+                    <i class="fa-brands fa-medium text-3xl text-gray-400 group-hover:text-white mb-3 transition-colors"></i>
+                    <span class="text-sm font-medium text-white">Medium</span>
+                    <span class="text-xs text-gray-500 mt-1">@gussstaaammm</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center border-t border-gray-800 text-sm text-gray-500 font-mono">
+        <p>&copy; 2026 Gustam Rahmat Kristyanto. Designed for Security & Performance.</p>
+    </footer>
+
+</body>
+</html>
